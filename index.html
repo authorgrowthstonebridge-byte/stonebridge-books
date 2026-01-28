@@ -4,8 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Stonebridge Books | Author Growth & Book Marketing</title>
+  <meta name="description" content="Stonebridge Books helps authors increase book sales, visibility, and long-term discoverability through professional marketing strategies.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -14,30 +20,72 @@
       line-height: 1.6;
     }
 
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #0b1524;
+      padding: 15px 0;
+      z-index: 1000;
+      border-bottom: 1px solid #16263d;
+    }
+
+    .nav-container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #d6dde8;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      color: #3bb273;
+    }
+
+    /* GENERAL */
     .container {
       width: 90%;
       max-width: 1100px;
       margin: auto;
-      padding: 60px 0;
-    }
-
-    h1, h2, h3 {
-      margin-bottom: 15px;
-      font-weight: 700;
+      padding: 90px 0;
     }
 
     h1 {
       font-size: 42px;
+      margin-bottom: 20px;
     }
 
     h2 {
       font-size: 32px;
       color: #3bb273;
+      margin-bottom: 20px;
     }
 
     p {
       font-size: 18px;
       color: #d6dde8;
+      max-width: 800px;
     }
 
     .btn {
@@ -49,20 +97,16 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 6px;
+      transition: 0.3s ease;
     }
 
-    .hero {
-      text-align: center;
-      padding-top: 80px;
-    }
-
-    .section {
-      margin-top: 80px;
+    .btn:hover {
+      background-color: #2e9f63;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
       margin-top: 40px;
     }
@@ -73,28 +117,55 @@
       border-radius: 10px;
     }
 
-    .testimonial {
-      font-style: italic;
-    }
-
     .stars {
       color: #3bb273;
       font-size: 20px;
       margin-bottom: 10px;
     }
 
+    /* CONTACT FORM */
+    form {
+      max-width: 600px;
+      margin-top: 40px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    input[type="submit"] {
+      background-color: #3bb273;
+      color: #0f1c2e;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2e9f63;
+    }
+
     footer {
       background-color: #0b1524;
       text-align: center;
       padding: 40px 20px;
-      margin-top: 80px;
-      font-size: 16px;
       color: #aab4c3;
+      font-size: 15px;
     }
 
     @media (max-width: 768px) {
-      h1 {
-        font-size: 34px;
+      nav ul {
+        display: none;
       }
     }
   </style>
@@ -102,84 +173,112 @@
 
 <body>
 
-  <!-- HERO SECTION -->
-  <section class="hero container">
-    <h1>Strategic Book Marketing for Authors Ready to Grow</h1>
-    <p>
-      Stonebridge Books helps authors increase qualified visibility, improve sales conversion,
-      and build long-term discoverability — without hype or shortcuts.
-    </p>
-    <a href="mailto:authorgrowth.stonebridge@gmail.com" class="btn">
-      Work With Stonebridge Books
-    </a>
-  </section>
+<!-- NAV -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">Stonebridge Books</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <!-- OUTCOMES SECTION -->
-  <section class="section container">
-    <h2>What Authors Gain</h2>
-    <div class="grid">
-      <div class="card">✔ Visibility among readers who actually buy</div>
-      <div class="card">✔ Stronger Amazon listing conversion & positioning</div>
-      <div class="card">✔ Short-form video strategies that drive clicks, not just views</div>
-      <div class="card">✔ Improved review velocity & reader engagement</div>
-      <div class="card">✔ Clear funnels from social media to Amazon</div>
-      <div class="card">✔ Sustainable growth — not one-time promo spikes</div>
+<!-- HOME -->
+<section id="home" class="container">
+  <h1>Strategic Book Marketing for Authors Ready to Grow</h1>
+  <p>
+    Stonebridge Books helps authors increase qualified visibility, improve sales conversion,
+    and build long-term discoverability through professional, results-driven marketing.
+  </p>
+  <a href="#contact" class="btn">Work With Stonebridge Books</a>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="container">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">Amazon Listing Optimization & Conversion Strategy</div>
+    <div class="card">BookTok & Short-Form Video Marketing</div>
+    <div class="card">Reader Funnel Strategy (Social → Amazon)</div>
+    <div class="card">Visibility Campaigns for Serious Authors</div>
+    <div class="card">Review Growth & Engagement Systems</div>
+    <div class="card">Long-Term Author Brand Positioning</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container">
+  <h2>About Stonebridge Books</h2>
+  <p>
+    Stonebridge Books is a professional book marketing agency helping authors grow sustainably.
+    We do not offer free promotion or shortcuts. Our focus is strategy, execution,
+    and long-term results for authors who treat publishing like a business.
+  </p>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="container">
+  <h2>Author Reviews</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      “Stonebridge Books helped me turn visibility into real sales.
+      Everything was strategic and professional.”
+      <br><br>— Independent Author
     </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section container">
-    <h2>What Authors Say</h2>
-    <div class="grid">
-
-      <div class="card testimonial">
-        <div class="stars">★★★★★</div>
-        “Stonebridge Books helped me turn visibility into actual sales.
-        The strategy focused on real readers, not empty traffic.”
-        <br><br>— Independent Author
-      </div>
-
-      <div class="card testimonial">
-        <div class="stars">★★★★★</div>
-        “This felt like working with a growth partner, not a promo blast.
-        Everything was intentional and professional.”
-        <br><br>— Thriller & Mystery Author
-      </div>
-
-      <div class="card testimonial">
-        <div class="stars">★★★★★</div>
-        “No hype, no unrealistic promises — just clear execution.
-        I finally felt confident investing in marketing.”
-        <br><br>— Romance Author
-      </div>
-
-      <div class="card testimonial">
-        <div class="stars">★★★★★</div>
-        “My book finally looks market-ready.
-        Stonebridge helped refine my positioning and discoverability.”
-        <br><br>— Fantasy Author
-      </div>
-
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      “No hype — just real growth planning and execution.”
+      <br><br>— Thriller Author
     </div>
-  </section>
+    <div class="card">
+      <div class="stars">★★★★★</div>
+      “I finally felt confident investing in book marketing.”
+      <br><br>— Romance Author
+    </div>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="section container" style="text-align:center;">
-    <h2>Ready to Grow Your Book the Right Way?</h2>
-    <p>
-      Stonebridge Books works with authors who understand that real growth
-      requires strategy, consistency, and smart investment.
-    </p>
-    <a href="mailto:authorgrowth.stonebridge@gmail.com" class="btn">
-      Apply to Work Together
-    </a>
-  </section>
+<!-- FAQ -->
+<section id="faq" class="container">
+  <h2>FAQ</h2>
+  <div class="grid">
+    <div class="card"><strong>Do you offer free promotion?</strong><br>No. We work with serious authors who invest in growth.</div>
+    <div class="card"><strong>Do you guarantee results?</strong><br>No guarantees — only proven strategies and execution.</div>
+    <div class="card"><strong>Who is this for?</strong><br>Authors focused on long-term visibility and sales.</div>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Stonebridge Books · Author Growth & Book Marketing<br>
-    Contact: authorgrowth.stonebridge@gmail.com
-  </footer>
+<!-- CONTACT -->
+<section id="contact" class="container">
+  <h2>Contact Stonebridge Books</h2>
+  <p>
+    If you're interested in working together, fill out the form below.
+    We respond to serious inquiries only.
+  </p>
+
+  <!-- FORM SUBMIT -->
+  <form action="https://formsubmit.co/authorgrowth.stonebridge@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Inquiry – Stonebridge Books">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Tell us about your book and goals" required></textarea>
+
+    <input type="submit" value="Send Message">
+  </form>
+</section>
+
+<footer>
+  © 2026 Stonebridge Books · Author Growth & Book Marketing<br>
+  authorgrowth.stonebridge@gmail.com
+</footer>
 
 </body>
 </html>
